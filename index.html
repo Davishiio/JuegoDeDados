@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Dados</title>
+    <script src="dist/JuegoDados.js" defer></script>
+    <script src="dist/Jugador.js" defer></script>
+    <script src="dist/Principal.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Juego de Dados</h1>
+    <div class="container">
+        <label for="jugador1">Jugador 1:</label>
+        <input type="text" id="jugador1">
+        <br><br>
+        <label for="jugador2">Jugador 2:</label>
+        <input type="text" id="jugador2">
+        <br><br>
+        <button onclick="iniciarJuego()">Iniciar Juego</button>
+    </div>
+    <div id="resultado"></div>
+</body>
+</html>
