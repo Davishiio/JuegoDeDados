@@ -1,33 +1,36 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juego de Dados</title>
-    <script src="dist/JuegoDados.js" defer></script>
-    <script src="dist/Jugador.js" defer></script>
-    <script src="dist/Principal.js" defer></script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
-        .container {
-            margin-top: 20px;
-        }
-    </style>
-</head>
 <body>
     <h1>Juego de Dados</h1>
-    <div class="container">
-        <label for="jugador1">Jugador 1:</label>
-        <input type="text" id="jugador1">
-        <br><br>
-        <label for="jugador2">Jugador 2:</label>
-        <input type="text" id="jugador2">
-        <br><br>
-        <button onclick="iniciarJuego()">Iniciar Juego</button>
-    </div>
+
+    <label for="jugador1">Nombre del Jugador 1:</label>
+    <input type="text" id="jugador1">
+
+    <label for="jugador2">Nombre del Jugador 2:</label>
+    <input type="text" id="jugador2">
+
+    <button id="startGame">Iniciar Juego</button>
+
+    <!-- Contenedor para el resultado y animación -->
     <div id="resultado"></div>
+    
+    <!-- Contenedor para la animación de los dados -->
+    <div>
+        <img id="dado1" src="./images/dado1.png" width="50">
+        <img id="dado2" src="./images/dado1.png" width="50">
+    </div>
+
+    <!-- Tabla para registrar los resultados -->
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Jugador 1</th>
+                <th>Dado 1</th>
+                <th>Jugador 2</th>
+                <th>Dado 2</th>
+                <th>Vencedor</th>
+            </tr>
+        </thead>
+        <tbody id="tablaResultados"></tbody>
+    </table>
+
+    <script type="module" src="./dist/Principal.js"></script>
 </body>
-</html>
